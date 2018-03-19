@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+ 
+<layout>
+    <adminhtml_best_best_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>weber_best/best</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="weber_best/adminhtml_best" name="best" />
+
+        </reference>
+    </adminhtml_best_best_index>
+    <adminhtml_best_best_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="weber_best/adminhtml_best_grid" name="best_grid"/>
+        </block>
+    </adminhtml_best_best_grid>
+    <!-- Best add/edit action -->
+    <adminhtml_best_best_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>weber_best/best</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="weber_best/adminhtml_best_edit" name="best_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="weber_best/adminhtml_best_edit_tabs" name="best_tabs"></block>
+        </reference>
+    </adminhtml_best_best_edit>
+
+</layout>

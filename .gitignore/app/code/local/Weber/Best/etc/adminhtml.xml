@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <weber_best translate="title" module="weber_best">
+                                        <title>Best</title>
+                                    </weber_best>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <weber_best translate="title" module="weber_best">
+                        <title>Best</title>
+                        <children>
+                            <best translate="title" module="weber_best">
+                                <title>Best</title>
+                                <sort_order>0</sort_order>
+                            </best>
+                        </children>
+                    </weber_best>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <weber_best translate="title" module="weber_best">
+            <title>Best</title>
+            <sort_order>65</sort_order>
+            <children>
+                <best translate="title" module="weber_best">
+                    <title>Best</title>
+                    <action>adminhtml/best_best</action>
+                    <sort_order>0</sort_order>
+                </best>
+            </children>
+        </weber_best>
+    </menu>
+</config>
